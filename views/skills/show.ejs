@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Node express skills app</title>
+  <link rel="stylesheet" href="../stylesheets/style.css" type="text/css" />
+</head>
+
+<body>
+  <h1>My skills</h1>
+  <ul>
+    <% if(skills.length){ for(var i=0; i< skills.length; i++){%>
+      <li>
+        <%= skills[i].skill%> &nbsp; &nbsp; <a class="delete" href="delete/<%=skills[i].id%>">delete</a>
+
+      </li>
+      <% } }else{ %>
+        <div>
+          <p>No Skills</p>
+        </div>
+        <% } %>
+  </ul>
+</body>
+
+</html>
